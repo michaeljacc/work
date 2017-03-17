@@ -3,37 +3,41 @@ import os
 
 from . import ModelMixin
 from . import db
+import time
+import random
 
 
-class User(db.Model, ModelMixin):
+class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String())
+    password = db.Column(db.String())
+    avatar = db.Column(db.String())
+    created_time = db.Column(db.Integer, default=0)
+
+    @classmethod
+    def new(cls, form):
+        m = cls(form)
+        m.save()
+        return m
 
     def __init__(self, form):
         self.username = form.get('username', '')
+        self.password = form.get('password', '')
+        self.avatar = form.get('avatar', 'http://vip.cocode.cc/uploads/avatar/default.png')
+        self.created_time = int(time.time())
 
-    def _update(self, form):
-        print('user update', self, form)
-        self.username = form.get('username', self.username)
+    def av(self):
+        a = random.uniform(1, 2)
+        a = int(a)
+        path = '/static/images/avatar{}.jpg'.format(a)
+        return path
 
-    def valid_username(self, username):
-        return User.query.filter_by(username=self.username).first() == None
-
-    # 验证注册用户的合法性
     def valid(self):
-        valid_username = self.valid_username()
-        valid_username_len = len(self.username) >= 6
-        valid_password_len = len(self.password) >= 6
-        msgs = []
-        if not valid_username:
-            message = '用户名已经存在'
-            msgs.append(message)
-        if not valid_username_len:
-            message = '用户名长度必须大于等于 6'
-            msgs.append(message)
-        if not valid_password_len:
-            message = '密码长度必须大于等于 6'
-            msgs.append(message)
-        status = valid_username and valid_username_len and valid_password_len
-        return status, msgs
+        user = User.query.filter_by(username=self.username).first()
+        if user is not None:
+            return False
+        return len(self.username) > 2 and len(self.password) > 2
+
+    def validate_login(self, u):
+        return u.username == self.username and u.password == self.password

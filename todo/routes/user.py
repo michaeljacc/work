@@ -1,55 +1,53 @@
+from flask import render_template
+from flask import request
+from flask import redirect
+from flask import url_for
+from flask import Blueprint
+from flask import abort
+from flask import session
+
 from models.user import User
-from routes import *
 
 
 main = Blueprint('user', __name__)
 
-Model = User
 
-
-xfrs_dict = {
-    'd40a58205d884331aa7f2a7304ad6345': 0,
-}
-
-def random_string():
-    import uuid
-    return str(uuid.uuid4())
+def current_user():
+    uid = session.get("user_id")
+    if uid is not None:
+        u = User.query.get(uid)
+        return u
 
 
 @main.route('/')
-def index():
-    ms = Model.query.all()
-    xfrs = random_string()
-    xfrs_dict[xfrs] = 0
-    return render_template('user/index.html', xfrs=xfrs,  user_list=ms)
+def login_view():
+    u = current_user()
+    if u is not None:
+        return redirect('/blogs')
+    return render_template('login.html')
 
 
-@main.route('/edit/<id>')
-def edit(id):
-    m = Model.query.get(id)
-    return render_template('user/edit.html', user=m)
-
-
-@main.route('/add', methods=['POST'])
-def add():
+@main.route('/register', methods=['POST'])
+def register():
     form = request.form
-    xfrs = form.get('xfrs')
-    if xfrs in xfrs_dict:
-        xfrs_dict.pop(xfrs)
-        Model.new(form)
-        return redirect(url_for('.index'))
+    u = User(form)
+    avatar = u.av()
+    u.avatar = avatar
+    if u.valid():
+        u.save()
     else:
-        return 'ERROR 非法链接'
+        abort(410)
+    return redirect(url_for('.login_view'))
 
 
-@main.route('/update/<id>', methods=['POST'])
-def update(id):
+@main.route('/login', methods=['POST'])
+def login():
     form = request.form
-    Model.update(id, form)
-    return redirect(url_for('.index'))
-
-
-@main.route('/delete/<int:id>')
-def delete(id):
-    Model.delete(id)
-    return redirect(url_for('.index'))
+    u = User(form)
+    user = User.query.filter_by(username=u.username).first()
+    if user is not None and user.validate_login(u):
+        print("success")
+        session['user_id'] = user.id
+    else:
+        print('FAILD')
+    return redirect("/blogs")
