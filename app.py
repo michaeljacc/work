@@ -58,7 +58,7 @@ def register_routes(app):
     app.register_blueprint(routes_todo, url_prefix='/todo')
 
     from routes.user import main as routes_user
-    app.register_blueprint(routes_user, url_prefix='/user')
+    app.register_blueprint(routes_user, )
 
     from routes.blogs import main as routes_blog
     app.register_blueprint(routes_blog, )

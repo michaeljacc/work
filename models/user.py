@@ -7,7 +7,7 @@ import time
 import random
 
 
-class User(db.Model):
+class User(db.Model,ModelMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String())
