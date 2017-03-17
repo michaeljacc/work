@@ -1,103 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97730ec1-1a27-4d47-b34e-202c7ab4652a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/.idea/todo.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/app.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/config.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/db.sqlite" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/migrations/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/migrations/alembic.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/migrations/env.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/migrations/script.py.mako" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/migrations/versions/fd7cf418a2af_12.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/models/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/models/blog.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/models/todo.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/models/user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/routes/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/routes/blog.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/routes/blogs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/routes/todo.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/routes/user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/css/alertify.core.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/css/alertify.default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/css/pure-min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (1).gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (1).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (10).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (11).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (12).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (13).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (14).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (15).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (16).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (17).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (18).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (19).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (2).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (20).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (21).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (22).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (23).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (24).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (25).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (26).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (27).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (28).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (29).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (3).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (30).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (4).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (5).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (6).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (7).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (8).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar (9).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/avatar2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/bg7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/blogs-bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/clippy.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/login-bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/mine.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/images/mine1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/alertify.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/blogs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/jquery-3.0.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/particles.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/static/js/weibo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/410.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/blog_all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/blog_detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/blog_list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/blog_new.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/message.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/todo_edit.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/todo_index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/user/edit.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/templates/user/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/web19.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo/wsgi.py" afterPath="" />
-    </list>
+    <list default="true" id="97730ec1-1a27-4d47-b34e-202c7ab4652a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,8 +31,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="230">
+              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -437,7 +341,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -445,7 +349,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -480,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="230">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding />
         </state>
       </provider>
