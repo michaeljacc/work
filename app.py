@@ -63,7 +63,8 @@ def register_routes(app):
     from routes.blogs import main as routes_blog
     app.register_blueprint(routes_blog, )
 
-
+    from routes.message import main as routes_message
+    app.register_blueprint(routes_message, )
 # 自定义的命令行命令用来运行服务器
 @manager.command
 def server():
