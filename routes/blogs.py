@@ -8,7 +8,7 @@ Model = Blog
 
 @main.route('/')
 def login():
-    return render_template("login.html")
+    return render_template("test.html")
 
 
 @main.route('/blogs')
