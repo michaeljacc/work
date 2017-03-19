@@ -8,7 +8,6 @@ from flask import session
 
 from models.user import User
 
-
 main = Blueprint('user', __name__)
 
 
@@ -24,7 +23,8 @@ def login_view():
     u = current_user()
     if u is not None:
         return redirect('/blogs')
-    return render_template('test.html')
+    else:
+        return render_template('test.html')
 
 
 @main.route('/register', methods=['POST'])
@@ -43,6 +43,7 @@ def register():
 @main.route('/login', methods=['POST'])
 def login():
     form = request.form
+    print("form", form)
     u = User(form)
     user = User.query.filter_by(username=u.username).first()
     if user is not None and user.validate_login(u):
@@ -50,4 +51,5 @@ def login():
         session['user_id'] = user.id
     else:
         print('FAILD')
+        return redirect(url_for('.login_view'))
     return redirect("/blogs")
