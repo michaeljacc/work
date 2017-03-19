@@ -24,7 +24,7 @@ def login_view():
     u = current_user()
     if u is not None:
         return redirect('/blogs')
-    return render_template('login.html')
+    return render_template('test.html')
 
 
 @main.route('/register', methods=['POST'])

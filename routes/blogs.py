@@ -6,10 +6,6 @@ main = Blueprint('Blog', __name__)
 Model = Blog
 
 
-@main.route('/')
-def login():
-    return render_template("test.html")
-
 
 @main.route('/blogs')
 def index():
