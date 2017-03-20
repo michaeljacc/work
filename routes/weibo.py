@@ -32,6 +32,8 @@ def index():
                 print('u',u.username,u.password)
                 j.avatar = u.avatar
                 print('tt头像',j.avatar)
+            else:
+                j.avatar = 'http://k1.jsqq.net/uploads/allimg/1612/140F5A32-6.jpg'
         u = User.query.filter_by(id=i.user_id).first()
         i.comments_num = len(i.comments())
         i.avatar = i.get_avatar()
@@ -54,6 +56,7 @@ def comment():
     form = request.form
     u = current_user()
     c = Comment(form)
+    print('request comment',c.comment)
     c.name = u.username
     if c.valid():
         c.save()

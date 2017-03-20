@@ -67,7 +67,7 @@
                     </div>
                     <div class="comment-div hide">
                         <div class="">
-                        {% for c in t.comment %}
+                        {% for c in t.comments() %}
                             <div class="">
                                 <img src="{{ c.avatar }}" class="avatar-s">
                                 <span class="">{{ c.comment }}</span>
