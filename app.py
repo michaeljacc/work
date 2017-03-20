@@ -65,6 +65,11 @@ def register_routes(app):
     from routes.message import main as routes_message
     app.register_blueprint(routes_message, )
 
+    from routes.weibo import main as routes_weibo
+    app.register_blueprint(routes_weibo, )
+
+    from routes.api import main as routes_api
+    app.register_blueprint(routes_api, url_prefix='/api' )
 
 # 自定义的命令行命令用来运行服务器
 @manager.command

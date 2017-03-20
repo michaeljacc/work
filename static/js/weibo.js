@@ -1,8 +1,8 @@
-var log = function() {
-  console.log(arguments)
+var log = function () {
+    console.log(arguments)
 }
 
-var weiboTemplate = function(weibo) {
+var weiboTemplate = function (weibo) {
     var w = weibo
     var t = `
         <div class="blogs-cell  weibo-cell" style="padding-top: 5px;">
@@ -37,8 +37,8 @@ var weiboTemplate = function(weibo) {
     return t
 }
 
-var bindEventCommentToggle = function(){
-    $('body').on('click', 'a.pylp', function(){
+var bindEventCommentToggle = function () {
+    $('body').on('click', 'a.pylp', function () {
         var weiboCell = $(this).closest(".weibo-cell")
         var weiboComment = weiboCell.find('.comment-div')
         console.log('111', weiboComment)
@@ -47,53 +47,53 @@ var bindEventCommentToggle = function(){
     })
 }
 
-var bindEventWeiboAdd = function() {
-    $('#id-button-weibo-add').on('click', function(){
-      var weibo = $('#id-input-weibo').val()
-      log('weibo,', weibo)
-      var form = {
-        weibo: weibo,
-      }
-      var response = function(r) {
-          console.log('成功', arguments)
-          log(r)
-          if(r.success) {
-              console.log('456')
-              var w = r.data
-              var a = $('.weibo-container')
-              $('.weibo-container').prepend(weiboTemplate(w))
-              $('#id-input-weibo').val('')
-              console.log('123', a)
-          } else {
-              alert(r.message)
-          }
-      }
+var bindEventWeiboAdd = function () {
+    $('#id-button-weibo-add').on('click', function () {
+        var weibo = $('#id-input-weibo').val()
+        log('weibo,', weibo)
+        var form = {
+            weibo: weibo,
+        }
+        var response = function (r) {
+            console.log('成功', arguments)
+            log(r)
+            if (r.success) {
+                console.log('456')
+                var w = r.data
+                var a = $('.weibo-container')
+                $('.weibo-container').prepend(weiboTemplate(w))
+                $('#id-input-weibo').val('')
+                console.log('123', a)
+            } else {
+                alert(r.message)
+            }
+        }
 
-      api.weiboAdd(form, response)
+        api.weiboAdd(form, response)
     })
 }
 
-var bindEventWeiboDelete = function() {
-    $('body').on('click', '.weibo-delete', function(){
-      var weiboId = $(this).data('id')
-      log(weiboId)
-      var weiboCell = $(this).closest('.weibo-cell')
+var bindEventWeiboDelete = function () {
+    $('body').on('click', '.weibo-delete', function () {
+        var weiboId = $(this).data('id')
+        log(weiboId)
+        var weiboCell = $(this).closest('.weibo-cell')
 
-      api.weiboDelete(weiboId, function(response) {
-          var r = response
-          if(r.success) {
-              console.log('成功', arguments)
-              $(weiboCell).slideUp()
-          } else {
-              console.log('错误', arguments)
-              alert("删除失败")
-          }
-      })
+        api.weiboDelete(weiboId, function (response) {
+            var r = response
+            if (r.success) {
+                console.log('成功', arguments)
+                $(weiboCell).slideUp()
+            } else {
+                console.log('错误', arguments)
+                alert("删除失败")
+            }
+        })
     })
 }
 
-var bindEventWeiboEdit = function() {
-    $('body').on('click', '.weibo-edit', function(){
+var bindEventWeiboEdit = function () {
+    $('body').on('click', '.weibo-edit', function () {
         var button = $(this)
         var weiboId = $(this).data('id')
         var weiboCell = button.closest('.weibo-cell')
@@ -105,8 +105,8 @@ var bindEventWeiboEdit = function() {
     })
 }
 
-var bindEventWeiboUpdate = function() {
-    $('body').on('click', '.weibo-update', function(){
+var bindEventWeiboUpdate = function () {
+    $('body').on('click', '.weibo-update', function () {
         var button = $(this)
         var weiboId = $(this).data('id')
         var weiboCell = button.closest('.weibo-cell')
@@ -118,14 +118,14 @@ var bindEventWeiboUpdate = function() {
             weibo: weiboNew,
         }
 
-        var response = function(r) {
-            if(r.success) {
+        var response = function (r) {
+            if (r.success) {
                 console.log('456')
                 var w = r.data
                 var a = $('.weibo-container')
                 console.log('123', a)
                 alert("修改成功")
-                $(weiboContent.text( weiboNew ))
+                $(weiboContent.text(weiboNew))
                 $(xqgl).slideUp()
             } else {
                 alert(r.message)
@@ -137,7 +137,7 @@ var bindEventWeiboUpdate = function() {
 }
 
 
-var bindEvents = function() {
+var bindEvents = function () {
     bindEventCommentToggle()
     bindEventWeiboAdd()
     bindEventWeiboDelete()
@@ -145,6 +145,6 @@ var bindEvents = function() {
     bindEventWeiboUpdate()
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     bindEvents()
 })

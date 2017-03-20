@@ -1,6 +1,3 @@
-import hashlib
-import os
-
 from . import ModelMixin
 from . import db
 import time
@@ -14,23 +11,19 @@ class User(db.Model, ModelMixin):
     password = db.Column(db.String())
     avatar = db.Column(db.String())
     created_time = db.Column(db.Integer, default=0)
-
-    @classmethod
-    def new(cls, form):
-        m = cls(form)
-        m.save()
-        return m
+    weibo = db.relationship('Weibo', backref='user')
+    comments = db.relationship('Comment', backref='user')
 
     def __init__(self, form):
         self.username = form.get('username', '')
         self.password = form.get('password', '')
-        self.avatar = form.get('avatar', 'http://vip.cocode.cc/uploads/avatar/default.png')
+        self.avatar = form.get('avatar', '/static/images/avatar (17)')
         self.created_time = int(time.time())
 
     def av(self):
         a = random.uniform(1, 2)
         a = int(a)
-        path = '/static/images/avatar{}.jpg'.format(a)
+        path = './static/images/avatar{}.jpg'.format(a)
         return path
 
     def valid(self):
