@@ -85,4 +85,4 @@ class Comment(db.Model, ModelMixin):
         a = User.query.filter_by(username=self.name).first()
         if a is None:
             return 'http://k1.jsqq.net/uploads/allimg/1612/140F5A32-6.jpg'
-        return 'http://k1.jsqq.net/uploads/allimg/1612/140F5A32-6.jpg'
+        return a.avatar

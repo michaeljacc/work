@@ -53,3 +53,12 @@ def login():
         print('FAILD')
         return redirect(url_for('.login_view'))
     return redirect("/blogs")
+
+
+@main.route('/detail', methods=['GET'])
+def detail():
+    u = current_user()
+    print('u', u.avatar)
+    u.avatar = '/static/images/avatar (12).jpg'
+    print('u', u.avatar)
+    return render_template('detail.html', user=u)
