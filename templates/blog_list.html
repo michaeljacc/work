@@ -85,7 +85,13 @@
       var bodyBgs = [];
       bodyBgs[0] = "/static/images/1.jpg";
       bodyBgs[1] = "/static/images/2.jpg";
-      var randomBgIndex = Math.round(Math.random());
+      bodyBgs[2] = "/static/images/3.jpg";
+      bodyBgs[3] = "/static/images/4.jpg";
+      bodyBgs[4] = "/static/images/5.jpg";
+      bodyBgs[5] = "/static/images/6.jpg";
+      bodyBgs[6] = "/static/images/7.jpg";
+      bodyBgs[7] = "/static/images/8.jpg";
+      var randomBgIndex = Math.floor(Math.random()*7);
       //输出随机的背景图
       // <body style="background-image:url(../my/source/img/admin/button.jpg); background-repeat:repeat-y;"></body>
       document.getElementById("BackgroundArea").style.backgroundImage = "url(" + bodyBgs[randomBgIndex] + ")";
