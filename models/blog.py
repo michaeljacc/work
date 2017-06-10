@@ -18,7 +18,3 @@ class Blog(db.Model, ModelMixin):
         self.content = form.get('content', '')
         self.author = form.get('author', '')
         self.created_time = int(time.time())
-
-
-
-
