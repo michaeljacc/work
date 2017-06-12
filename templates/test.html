@@ -29,6 +29,11 @@
       width: 440px;
     }
 
+    audio#id-audio-player {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+}
     .music {
       position: fixed;
       bottom: 0px;
@@ -76,8 +81,8 @@
         <div class="button-wjw">
           <button type="submit" class="btn btn-danger col-lg-12 ">登录</button>
         </div>
-        <audio id='id-audio-player' controls="controls">
-              <source src="/static/music/we.mp3">
+        <audio id='id-audio-player' class="botton-music" autoplay="autoplay" controls="controls" loop="loop" preload="auto" controls="controls">
+              <source src="/static/music/down.mp3">
             </audio >
         </div>
     </div>
