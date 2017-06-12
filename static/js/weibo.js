@@ -40,23 +40,23 @@ var weiboTemplate = function (weibo) {
 var bindEventCommentToggle = function () {
     $('body').on('click', 'a.pylp', function () {
         var weiboCell = $(this).closest(".weibo-cell")
+        log('1233', a.pylp)
         var weiboComment = weiboCell.find('.comment-div')
         console.log('111', weiboComment)
         weiboComment.slideToggle()
-        return false;
+        return false
     })
 }
 
 var bindEventWeiboAdd = function () {
     $('#id-button-weibo-add').on('click', function () {
         var weibo = $('#id-input-weibo').val()
-        log('weibo,', weibo)
         var form = {
             weibo: weibo,
         }
         var response = function (r) {
             console.log('成功', arguments)
-            log(r)
+            log('!!!!!!!!!!!!!!!!!!!!!!!!',r)
             if (r.success) {
                 console.log('456')
                 var w = r.data
@@ -74,9 +74,10 @@ var bindEventWeiboAdd = function () {
 }
 
 var bindEventWeiboDelete = function () {
+    log('123')
     $('body').on('click', '.weibo-delete', function () {
         var weiboId = $(this).data('id')
-        log(weiboId)
+        log("******************", weiboId)
         var weiboCell = $(this).closest('.weibo-cell')
 
         api.weiboDelete(weiboId, function (response) {
