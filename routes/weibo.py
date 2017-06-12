@@ -22,7 +22,6 @@ def index():
     if u is None:
         return redirect(url_for('/'))
     weibo_list = Weibo.query.order_by(Weibo.id.desc()).all()
-    print('weibolist',weibo_list)
     for i in weibo_list:
         comment_list = i.comments()
         print('commetlist',comment_list)
