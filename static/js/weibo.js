@@ -40,8 +40,8 @@ var weiboTemplate = function (weibo) {
 var bindEventCommentToggle = function () {
     $('body').on('click', 'a.pylp', function () {
         var weiboCell = $(this).closest(".weibo-cell")
-        log('1233', a.pylp)
         var weiboComment = weiboCell.find('.comment-div')
+        log("!!!", $(this))
         console.log('111', weiboComment)
         weiboComment.slideToggle()
         return false

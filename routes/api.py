@@ -42,8 +42,9 @@ def add():
 def delete(weibo_id):
     u = current_user()
     w = Weibo.query.get(weibo_id)
+    print(w)
     if w.name == u.username:
-        w.delete()
+        w.remove()
         r = {
             'success': True,
             'data': w.json(),
