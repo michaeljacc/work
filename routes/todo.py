@@ -45,7 +45,9 @@ def add():
 @main.route('/update/<id>', methods=['POST'])
 def update(id):
     form = request.form
-    Model.update(id, form)
+    print('form update', form)
+    t = Todo.query.get(id)
+    t.update(form)
     u = current_user()
     return redirect(url_for('.index', user_id = u.id))
 
