@@ -36,7 +36,7 @@ def index():
         u = User.query.filter_by(id=i.user_id).first()
         i.comments_num = len(i.comments())
         i.avatar = i.get_avatar()
-    return render_template('weibo_index.html', weibos=weibo_list)
+    return render_template('weibo_index.html', weibos=weibo_list, user_id=u.id)
 
 
 @main.route('/add', methods=['POST'])

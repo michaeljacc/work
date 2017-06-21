@@ -1,16 +1,22 @@
 from models.blog import Blog
+from models.user import User
 from routes import *
 
 main = Blueprint('Blog', __name__)
 
 Model = Blog
 
-
+def current_user():
+    uid = session.get("user_id")
+    if uid is not None:
+        u = User.query.get(uid)
+        return u
 
 @main.route('/blogs')
 def index():
     ms = Model.query.all()
-    return render_template('blog_list.html', blog_list=ms)
+    u = current_user()
+    return render_template('blog_list.html', blog_list=ms, user_id=u.id)
 
 
 @main.route('/blogs/new')
@@ -34,8 +40,9 @@ def detail(blog_id):
 
 @main.route('/blogs/blogs')
 def blog():
+    u =current_user()
     ms = Model.query.all()
-    return render_template('blog_all.html', blog_list=ms)
+    return render_template('blog_all.html', blog_list=ms,user_id=u.id)
 
 
 @main.route('/comment/add', methods=['POST'])
