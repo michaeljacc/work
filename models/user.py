@@ -1,5 +1,6 @@
 from . import ModelMixin
 from . import db
+from models.todo import Todo
 import time
 import random
 
@@ -13,6 +14,7 @@ class User(db.Model, ModelMixin):
     created_time = db.Column(db.Integer, default=0)
     weibo = db.relationship('Weibo', backref='user')
     comments = db.relationship('Comment', backref='user')
+    todo = db.relationship('Todo', backref='user')
 
     def __init__(self, form):
         self.username = form.get('username', '')
@@ -34,3 +36,7 @@ class User(db.Model, ModelMixin):
 
     def validate_login(self, u):
         return u.username == self.username and u.password == self.password
+
+    def todos(self):
+        td = Todo.query.filter_by(user_id=self.id).all()
+        return td
