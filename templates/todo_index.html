@@ -12,7 +12,14 @@
         .todo-table {
             margin: 0 auto;
         }
-
+        .wjw-task{
+            min-width: 100px;
+            text-align: center;
+            background: lightblue;
+        }
+        .nav {
+            background: lightcoral;
+        }
         .center {
             text-align: center;
         }
@@ -20,22 +27,27 @@
             color: red;
             text-decoration: line-through;
         }
+        #sent-button {
+            margin-bottom: 5px;
+        }
+        .wjw-input {
+            height: 20px;
+        }
     </style>
 </head>
 <body>
 <div class="center">
     <h1>Todo</h1>
     <form action="{{ url_for('.add') }}" method="post">
-        <input type="text" placeholder="Add Todo" name="task">
+        <input class="wjw-input" type="text" placeholder="Add Todo" name="task">
         <input class="pure-button pure-button-primary wjw-button"
-               type="submit" value="Add">
+               type="submit" value="Add" id="sent-button">
     </form>
 </div>
 <table class="todo-table pure-table pure-table-horizontal pure-table-striped">
     <thead>
     <tr>
-        <th>#</th>
-        <th>Task</th>
+        <th class="wjw-task nav" >Task</th>
         <th>Time</th>
         <th>修改</th>
         <th>完成</th>
@@ -45,7 +57,7 @@
     <tbody>
     {% for t in todo_list %}
         <tr>
-            <td>{{ t.id }}</td>
+{#            <td>{{ t.id }}</td>#}
             <td data-complete="{{ t.complete }}" class="wjw-task">{{ t.task }}</td>
             <td>{{ t.created_time }}</td>
             <!-- url_for 可以传递参数，先匹配动态路由，如果动态路由匹配失败则变成 query 参数 -->
